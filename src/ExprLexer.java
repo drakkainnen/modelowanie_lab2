@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/uml/workspace/bartek/src/Expr.g 2016-03-02 14:15:08
+// $ANTLR 3.4 /home/uml/workspace/bartek/src/Expr.g 2016-03-02 14:49:59
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -40,8 +40,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:39:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/uml/workspace/bartek/src/Expr.g:39:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/uml/workspace/bartek/src/Expr.g:42:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/uml/workspace/bartek/src/Expr.g:42:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -53,7 +53,7 @@ public class ExprLexer extends Lexer {
             }
 
 
-            // /home/uml/workspace/bartek/src/Expr.g:39:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/uml/workspace/bartek/src/Expr.g:42:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -103,10 +103,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:41:5: ( ( '0' .. '9' )+ )
-            // /home/uml/workspace/bartek/src/Expr.g:41:7: ( '0' .. '9' )+
+            // /home/uml/workspace/bartek/src/Expr.g:44:5: ( ( '0' .. '9' )+ )
+            // /home/uml/workspace/bartek/src/Expr.g:44:7: ( '0' .. '9' )+
             {
-            // /home/uml/workspace/bartek/src/Expr.g:41:7: ( '0' .. '9' )+
+            // /home/uml/workspace/bartek/src/Expr.g:44:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -161,10 +161,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = NL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:43:4: ( ( '\\r' )? '\\n' )
-            // /home/uml/workspace/bartek/src/Expr.g:43:6: ( '\\r' )? '\\n'
+            // /home/uml/workspace/bartek/src/Expr.g:46:4: ( ( '\\r' )? '\\n' )
+            // /home/uml/workspace/bartek/src/Expr.g:46:6: ( '\\r' )? '\\n'
             {
-            // /home/uml/workspace/bartek/src/Expr.g:43:6: ( '\\r' )?
+            // /home/uml/workspace/bartek/src/Expr.g:46:6: ( '\\r' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -173,7 +173,7 @@ public class ExprLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // /home/uml/workspace/bartek/src/Expr.g:43:6: '\\r'
+                    // /home/uml/workspace/bartek/src/Expr.g:46:6: '\\r'
                     {
                     match('\r'); 
 
@@ -201,10 +201,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:45:4: ( ( ' ' | '\\t' )+ )
-            // /home/uml/workspace/bartek/src/Expr.g:45:6: ( ' ' | '\\t' )+
+            // /home/uml/workspace/bartek/src/Expr.g:48:4: ( ( ' ' | '\\t' )+ )
+            // /home/uml/workspace/bartek/src/Expr.g:48:6: ( ' ' | '\\t' )+
             {
-            // /home/uml/workspace/bartek/src/Expr.g:45:6: ( ' ' | '\\t' )+
+            // /home/uml/workspace/bartek/src/Expr.g:48:6: ( ' ' | '\\t' )+
             int cnt4=0;
             loop4:
             do {
@@ -261,8 +261,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = LP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:49:3: ( '(' )
-            // /home/uml/workspace/bartek/src/Expr.g:49:5: '('
+            // /home/uml/workspace/bartek/src/Expr.g:52:3: ( '(' )
+            // /home/uml/workspace/bartek/src/Expr.g:52:5: '('
             {
             match('('); 
 
@@ -282,8 +282,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = RP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:53:3: ( ')' )
-            // /home/uml/workspace/bartek/src/Expr.g:53:5: ')'
+            // /home/uml/workspace/bartek/src/Expr.g:56:3: ( ')' )
+            // /home/uml/workspace/bartek/src/Expr.g:56:5: ')'
             {
             match(')'); 
 
@@ -303,8 +303,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = PODST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:57:3: ( '=' )
-            // /home/uml/workspace/bartek/src/Expr.g:57:5: '='
+            // /home/uml/workspace/bartek/src/Expr.g:60:3: ( '=' )
+            // /home/uml/workspace/bartek/src/Expr.g:60:5: '='
             {
             match('='); 
 
@@ -324,8 +324,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:61:3: ( '+' )
-            // /home/uml/workspace/bartek/src/Expr.g:61:5: '+'
+            // /home/uml/workspace/bartek/src/Expr.g:64:3: ( '+' )
+            // /home/uml/workspace/bartek/src/Expr.g:64:5: '+'
             {
             match('+'); 
 
@@ -345,8 +345,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:65:3: ( '-' )
-            // /home/uml/workspace/bartek/src/Expr.g:65:5: '-'
+            // /home/uml/workspace/bartek/src/Expr.g:68:3: ( '-' )
+            // /home/uml/workspace/bartek/src/Expr.g:68:5: '-'
             {
             match('-'); 
 
@@ -366,8 +366,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:69:3: ( '*' )
-            // /home/uml/workspace/bartek/src/Expr.g:69:5: '*'
+            // /home/uml/workspace/bartek/src/Expr.g:72:3: ( '*' )
+            // /home/uml/workspace/bartek/src/Expr.g:72:5: '*'
             {
             match('*'); 
 
@@ -387,8 +387,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/uml/workspace/bartek/src/Expr.g:73:3: ( '/' )
-            // /home/uml/workspace/bartek/src/Expr.g:73:5: '/'
+            // /home/uml/workspace/bartek/src/Expr.g:76:3: ( '/' )
+            // /home/uml/workspace/bartek/src/Expr.g:76:5: '/'
             {
             match('/'); 
 

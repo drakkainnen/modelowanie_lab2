@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/uml/workspace/bartek/src/Expr.g 2016-03-02 14:15:07
+// $ANTLR 3.4 /home/uml/workspace/bartek/src/Expr.g 2016-03-02 14:49:59
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -61,7 +61,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // /home/uml/workspace/bartek/src/Expr.g:9:1: prog : ( stat )+ EOF !;
+    // /home/uml/workspace/bartek/src/Expr.g:12:1: prog : ( stat )+ EOF !;
     public final ExprParser.prog_return prog() throws RecognitionException {
         ExprParser.prog_return retval = new ExprParser.prog_return();
         retval.start = input.LT(1);
@@ -76,13 +76,13 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree EOF2_tree=null;
 
         try {
-            // /home/uml/workspace/bartek/src/Expr.g:10:5: ( ( stat )+ EOF !)
-            // /home/uml/workspace/bartek/src/Expr.g:10:7: ( stat )+ EOF !
+            // /home/uml/workspace/bartek/src/Expr.g:13:5: ( ( stat )+ EOF !)
+            // /home/uml/workspace/bartek/src/Expr.g:13:7: ( stat )+ EOF !
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            // /home/uml/workspace/bartek/src/Expr.g:10:7: ( stat )+
+            // /home/uml/workspace/bartek/src/Expr.g:13:7: ( stat )+
             int cnt1=0;
             loop1:
             do {
@@ -96,9 +96,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/uml/workspace/bartek/src/Expr.g:10:8: stat
+            	    // /home/uml/workspace/bartek/src/Expr.g:13:8: stat
             	    {
-            	    pushFollow(FOLLOW_stat_in_prog35);
+            	    pushFollow(FOLLOW_stat_in_prog38);
             	    stat1=stat();
 
             	    state._fsp--;
@@ -118,7 +118,7 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_prog40); 
+            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_prog43); 
 
             }
 
@@ -151,7 +151,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "stat"
-    // /home/uml/workspace/bartek/src/Expr.g:12:1: stat : ( expr NL -> expr | ID PODST expr NL -> ^( PODST ID expr ) | NL ->);
+    // /home/uml/workspace/bartek/src/Expr.g:15:1: stat : ( expr NL -> expr | ID PODST expr NL -> ^( PODST ID expr ) | NL ->);
     public final ExprParser.stat_return stat() throws RecognitionException {
         ExprParser.stat_return retval = new ExprParser.stat_return();
         retval.start = input.LT(1);
@@ -179,7 +179,7 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_NL=new RewriteRuleTokenStream(adaptor,"token NL");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/uml/workspace/bartek/src/Expr.g:13:5: ( expr NL -> expr | ID PODST expr NL -> ^( PODST ID expr ) | NL ->)
+            // /home/uml/workspace/bartek/src/Expr.g:16:5: ( expr NL -> expr | ID PODST expr NL -> ^( PODST ID expr ) | NL ->)
             int alt2=3;
             switch ( input.LA(1) ) {
             case INT:
@@ -222,16 +222,16 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt2) {
                 case 1 :
-                    // /home/uml/workspace/bartek/src/Expr.g:13:7: expr NL
+                    // /home/uml/workspace/bartek/src/Expr.g:16:7: expr NL
                     {
-                    pushFollow(FOLLOW_expr_in_stat53);
+                    pushFollow(FOLLOW_expr_in_stat56);
                     expr3=expr();
 
                     state._fsp--;
 
                     stream_expr.add(expr3.getTree());
 
-                    NL4=(Token)match(input,NL,FOLLOW_NL_in_stat55);  
+                    NL4=(Token)match(input,NL,FOLLOW_NL_in_stat58);  
                     stream_NL.add(NL4);
 
 
@@ -246,7 +246,7 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 13:15: -> expr
+                    // 16:15: -> expr
                     {
                         adaptor.addChild(root_0, stream_expr.nextTree());
 
@@ -258,24 +258,24 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/uml/workspace/bartek/src/Expr.g:14:7: ID PODST expr NL
+                    // /home/uml/workspace/bartek/src/Expr.g:17:7: ID PODST expr NL
                     {
-                    ID5=(Token)match(input,ID,FOLLOW_ID_in_stat68);  
+                    ID5=(Token)match(input,ID,FOLLOW_ID_in_stat71);  
                     stream_ID.add(ID5);
 
 
-                    PODST6=(Token)match(input,PODST,FOLLOW_PODST_in_stat70);  
+                    PODST6=(Token)match(input,PODST,FOLLOW_PODST_in_stat73);  
                     stream_PODST.add(PODST6);
 
 
-                    pushFollow(FOLLOW_expr_in_stat72);
+                    pushFollow(FOLLOW_expr_in_stat75);
                     expr7=expr();
 
                     state._fsp--;
 
                     stream_expr.add(expr7.getTree());
 
-                    NL8=(Token)match(input,NL,FOLLOW_NL_in_stat74);  
+                    NL8=(Token)match(input,NL,FOLLOW_NL_in_stat77);  
                     stream_NL.add(NL8);
 
 
@@ -290,9 +290,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 14:24: -> ^( PODST ID expr )
+                    // 17:24: -> ^( PODST ID expr )
                     {
-                        // /home/uml/workspace/bartek/src/Expr.g:14:27: ^( PODST ID expr )
+                        // /home/uml/workspace/bartek/src/Expr.g:17:27: ^( PODST ID expr )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot(
@@ -316,9 +316,9 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/uml/workspace/bartek/src/Expr.g:15:7: NL
+                    // /home/uml/workspace/bartek/src/Expr.g:18:7: NL
                     {
-                    NL9=(Token)match(input,NL,FOLLOW_NL_in_stat92);  
+                    NL9=(Token)match(input,NL,FOLLOW_NL_in_stat95);  
                     stream_NL.add(NL9);
 
 
@@ -333,7 +333,7 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (CommonTree)adaptor.nil();
-                    // 15:10: ->
+                    // 18:10: ->
                     {
                         root_0 = null;
                     }
@@ -374,7 +374,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr"
-    // /home/uml/workspace/bartek/src/Expr.g:18:1: expr : multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )* ;
+    // /home/uml/workspace/bartek/src/Expr.g:21:1: expr : multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )* ;
     public final ExprParser.expr_return expr() throws RecognitionException {
         ExprParser.expr_return retval = new ExprParser.expr_return();
         retval.start = input.LT(1);
@@ -395,20 +395,20 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree MINUS13_tree=null;
 
         try {
-            // /home/uml/workspace/bartek/src/Expr.g:19:5: ( multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )* )
-            // /home/uml/workspace/bartek/src/Expr.g:19:7: multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )*
+            // /home/uml/workspace/bartek/src/Expr.g:22:5: ( multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )* )
+            // /home/uml/workspace/bartek/src/Expr.g:22:7: multExpr ( PLUS ^ multExpr | MINUS ^ multExpr )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_multExpr_in_expr115);
+            pushFollow(FOLLOW_multExpr_in_expr118);
             multExpr10=multExpr();
 
             state._fsp--;
 
             adaptor.addChild(root_0, multExpr10.getTree());
 
-            // /home/uml/workspace/bartek/src/Expr.g:20:7: ( PLUS ^ multExpr | MINUS ^ multExpr )*
+            // /home/uml/workspace/bartek/src/Expr.g:23:7: ( PLUS ^ multExpr | MINUS ^ multExpr )*
             loop3:
             do {
                 int alt3=3;
@@ -424,16 +424,16 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/uml/workspace/bartek/src/Expr.g:20:9: PLUS ^ multExpr
+            	    // /home/uml/workspace/bartek/src/Expr.g:23:9: PLUS ^ multExpr
             	    {
-            	    PLUS11=(Token)match(input,PLUS,FOLLOW_PLUS_in_expr125); 
+            	    PLUS11=(Token)match(input,PLUS,FOLLOW_PLUS_in_expr128); 
             	    PLUS11_tree = 
             	    (CommonTree)adaptor.create(PLUS11)
             	    ;
             	    root_0 = (CommonTree)adaptor.becomeRoot(PLUS11_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_multExpr_in_expr128);
+            	    pushFollow(FOLLOW_multExpr_in_expr131);
             	    multExpr12=multExpr();
 
             	    state._fsp--;
@@ -443,16 +443,16 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // /home/uml/workspace/bartek/src/Expr.g:21:9: MINUS ^ multExpr
+            	    // /home/uml/workspace/bartek/src/Expr.g:24:9: MINUS ^ multExpr
             	    {
-            	    MINUS13=(Token)match(input,MINUS,FOLLOW_MINUS_in_expr138); 
+            	    MINUS13=(Token)match(input,MINUS,FOLLOW_MINUS_in_expr141); 
             	    MINUS13_tree = 
             	    (CommonTree)adaptor.create(MINUS13)
             	    ;
             	    root_0 = (CommonTree)adaptor.becomeRoot(MINUS13_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_multExpr_in_expr141);
+            	    pushFollow(FOLLOW_multExpr_in_expr144);
             	    multExpr14=multExpr();
 
             	    state._fsp--;
@@ -499,7 +499,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "multExpr"
-    // /home/uml/workspace/bartek/src/Expr.g:25:1: multExpr : atom ( MUL ^ atom | DIV ^ atom )* ;
+    // /home/uml/workspace/bartek/src/Expr.g:28:1: multExpr : atom ( MUL ^ atom | DIV ^ atom )* ;
     public final ExprParser.multExpr_return multExpr() throws RecognitionException {
         ExprParser.multExpr_return retval = new ExprParser.multExpr_return();
         retval.start = input.LT(1);
@@ -520,20 +520,20 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree DIV18_tree=null;
 
         try {
-            // /home/uml/workspace/bartek/src/Expr.g:26:5: ( atom ( MUL ^ atom | DIV ^ atom )* )
-            // /home/uml/workspace/bartek/src/Expr.g:26:7: atom ( MUL ^ atom | DIV ^ atom )*
+            // /home/uml/workspace/bartek/src/Expr.g:29:5: ( atom ( MUL ^ atom | DIV ^ atom )* )
+            // /home/uml/workspace/bartek/src/Expr.g:29:7: atom ( MUL ^ atom | DIV ^ atom )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_atom_in_multExpr171);
+            pushFollow(FOLLOW_atom_in_multExpr174);
             atom15=atom();
 
             state._fsp--;
 
             adaptor.addChild(root_0, atom15.getTree());
 
-            // /home/uml/workspace/bartek/src/Expr.g:27:7: ( MUL ^ atom | DIV ^ atom )*
+            // /home/uml/workspace/bartek/src/Expr.g:30:7: ( MUL ^ atom | DIV ^ atom )*
             loop4:
             do {
                 int alt4=3;
@@ -549,16 +549,16 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt4) {
             	case 1 :
-            	    // /home/uml/workspace/bartek/src/Expr.g:27:9: MUL ^ atom
+            	    // /home/uml/workspace/bartek/src/Expr.g:30:9: MUL ^ atom
             	    {
-            	    MUL16=(Token)match(input,MUL,FOLLOW_MUL_in_multExpr181); 
+            	    MUL16=(Token)match(input,MUL,FOLLOW_MUL_in_multExpr184); 
             	    MUL16_tree = 
             	    (CommonTree)adaptor.create(MUL16)
             	    ;
             	    root_0 = (CommonTree)adaptor.becomeRoot(MUL16_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_atom_in_multExpr184);
+            	    pushFollow(FOLLOW_atom_in_multExpr187);
             	    atom17=atom();
 
             	    state._fsp--;
@@ -568,16 +568,16 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
             	    break;
             	case 2 :
-            	    // /home/uml/workspace/bartek/src/Expr.g:28:9: DIV ^ atom
+            	    // /home/uml/workspace/bartek/src/Expr.g:31:9: DIV ^ atom
             	    {
-            	    DIV18=(Token)match(input,DIV,FOLLOW_DIV_in_multExpr194); 
+            	    DIV18=(Token)match(input,DIV,FOLLOW_DIV_in_multExpr197); 
             	    DIV18_tree = 
             	    (CommonTree)adaptor.create(DIV18)
             	    ;
             	    root_0 = (CommonTree)adaptor.becomeRoot(DIV18_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_atom_in_multExpr197);
+            	    pushFollow(FOLLOW_atom_in_multExpr200);
             	    atom19=atom();
 
             	    state._fsp--;
@@ -624,7 +624,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /home/uml/workspace/bartek/src/Expr.g:32:1: atom : ( INT | ID | LP ! expr RP !);
+    // /home/uml/workspace/bartek/src/Expr.g:35:1: atom : ( INT | ID | LP ! expr RP !);
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -645,7 +645,7 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree RP24_tree=null;
 
         try {
-            // /home/uml/workspace/bartek/src/Expr.g:33:5: ( INT | ID | LP ! expr RP !)
+            // /home/uml/workspace/bartek/src/Expr.g:36:5: ( INT | ID | LP ! expr RP !)
             int alt5=3;
             switch ( input.LA(1) ) {
             case INT:
@@ -673,12 +673,12 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt5) {
                 case 1 :
-                    // /home/uml/workspace/bartek/src/Expr.g:33:7: INT
+                    // /home/uml/workspace/bartek/src/Expr.g:36:7: INT
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    INT20=(Token)match(input,INT,FOLLOW_INT_in_atom227); 
+                    INT20=(Token)match(input,INT,FOLLOW_INT_in_atom230); 
                     INT20_tree = 
                     (CommonTree)adaptor.create(INT20)
                     ;
@@ -688,12 +688,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/uml/workspace/bartek/src/Expr.g:34:7: ID
+                    // /home/uml/workspace/bartek/src/Expr.g:37:7: ID
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    ID21=(Token)match(input,ID,FOLLOW_ID_in_atom235); 
+                    ID21=(Token)match(input,ID,FOLLOW_ID_in_atom238); 
                     ID21_tree = 
                     (CommonTree)adaptor.create(ID21)
                     ;
@@ -703,21 +703,21 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/uml/workspace/bartek/src/Expr.g:35:7: LP ! expr RP !
+                    // /home/uml/workspace/bartek/src/Expr.g:38:7: LP ! expr RP !
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
 
-                    LP22=(Token)match(input,LP,FOLLOW_LP_in_atom243); 
+                    LP22=(Token)match(input,LP,FOLLOW_LP_in_atom246); 
 
-                    pushFollow(FOLLOW_expr_in_atom246);
+                    pushFollow(FOLLOW_expr_in_atom249);
                     expr23=expr();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, expr23.getTree());
 
-                    RP24=(Token)match(input,RP,FOLLOW_RP_in_atom248); 
+                    RP24=(Token)match(input,RP,FOLLOW_RP_in_atom251); 
 
                     }
                     break;
@@ -749,29 +749,29 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_stat_in_prog35 = new BitSet(new long[]{0x00000000000004E0L});
-    public static final BitSet FOLLOW_EOF_in_prog40 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_stat53 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_NL_in_stat55 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_stat68 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_PODST_in_stat70 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_expr_in_stat72 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_NL_in_stat74 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NL_in_stat92 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multExpr_in_expr115 = new BitSet(new long[]{0x0000000000000902L});
-    public static final BitSet FOLLOW_PLUS_in_expr125 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_multExpr_in_expr128 = new BitSet(new long[]{0x0000000000000902L});
-    public static final BitSet FOLLOW_MINUS_in_expr138 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_multExpr_in_expr141 = new BitSet(new long[]{0x0000000000000902L});
-    public static final BitSet FOLLOW_atom_in_multExpr171 = new BitSet(new long[]{0x0000000000000212L});
-    public static final BitSet FOLLOW_MUL_in_multExpr181 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_atom_in_multExpr184 = new BitSet(new long[]{0x0000000000000212L});
-    public static final BitSet FOLLOW_DIV_in_multExpr194 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_atom_in_multExpr197 = new BitSet(new long[]{0x0000000000000212L});
-    public static final BitSet FOLLOW_INT_in_atom227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atom235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LP_in_atom243 = new BitSet(new long[]{0x00000000000000E0L});
-    public static final BitSet FOLLOW_expr_in_atom246 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_RP_in_atom248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_stat_in_prog38 = new BitSet(new long[]{0x00000000000004E0L});
+    public static final BitSet FOLLOW_EOF_in_prog43 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_stat56 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_NL_in_stat58 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_stat71 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_PODST_in_stat73 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_expr_in_stat75 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_NL_in_stat77 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NL_in_stat95 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_multExpr_in_expr118 = new BitSet(new long[]{0x0000000000000902L});
+    public static final BitSet FOLLOW_PLUS_in_expr128 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_multExpr_in_expr131 = new BitSet(new long[]{0x0000000000000902L});
+    public static final BitSet FOLLOW_MINUS_in_expr141 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_multExpr_in_expr144 = new BitSet(new long[]{0x0000000000000902L});
+    public static final BitSet FOLLOW_atom_in_multExpr174 = new BitSet(new long[]{0x0000000000000212L});
+    public static final BitSet FOLLOW_MUL_in_multExpr184 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_atom_in_multExpr187 = new BitSet(new long[]{0x0000000000000212L});
+    public static final BitSet FOLLOW_DIV_in_multExpr197 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_atom_in_multExpr200 = new BitSet(new long[]{0x0000000000000212L});
+    public static final BitSet FOLLOW_INT_in_atom230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LP_in_atom246 = new BitSet(new long[]{0x00000000000000E0L});
+    public static final BitSet FOLLOW_expr_in_atom249 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_RP_in_atom251 = new BitSet(new long[]{0x0000000000000002L});
 
 }
