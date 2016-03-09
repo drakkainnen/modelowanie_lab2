@@ -6,9 +6,6 @@ options {
 }
 
 
-
-
-
 prog
     : (stat )+ EOF!;
 

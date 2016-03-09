@@ -10,7 +10,7 @@ options {
   import java.util.HashMap;
 }
 
-@member {
+@members {
 HashMap<String, Integer> memory = new HashMap();
 }
 
